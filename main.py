@@ -10,6 +10,7 @@ class Item(BaseModel):
     name: str
     price: float
     is_offer: Optional[bool] = None
+    tax: Optional[float] = None
 
 class ModelName(str, Enum):
     rafael = "rafael"
@@ -54,3 +55,11 @@ async def get_model(model_name: ModelName):
 @app.get("/files/{file_path:path}")
 async def read_file(file_path: str):
     return {"file_path": file_path}
+
+@app.post("/items/")
+async def create_item(item: Item):
+    item_dict = item.dict()
+    if item.tax:
+        price_with_tax = item.tax + item.price
+        item_dict.update({"price_with_tax":price_with_tax})
+    return item_dict
