@@ -9,9 +9,9 @@ def read(filename):
         ]
 
 setup(
-    name="delivery",
+    name="example",
     version="0.1.0",
-    description="delivery app",
+    description="example app",
     packages=find_packages(),
     include_package_data=True,
     install_requires=read("requirements.txt"),
