@@ -48,10 +48,11 @@ uvicorn main:app --reload
 - [] status_message(enum):
     - created_at: date
     - updated_at: date
-    - not sended: str
-    - sended: str
-    - delivered: str
-    - readed: str
+    - status:
+        - not sended: str
+        - sended: str
+        - delivered: str
+        - readed: str
 - [] historic:
     - id: id
     - id_message: int

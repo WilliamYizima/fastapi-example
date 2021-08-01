@@ -9,9 +9,9 @@ def read(filename):
         ]
 
 setup(
-    name="example",
+    name="msgls",
     version="0.1.0",
-    description="example app",
+    description="messages large scale",
     packages=find_packages(),
     include_package_data=True,
     install_requires=read("requirements.txt"),
