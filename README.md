@@ -57,3 +57,5 @@ uvicorn main:app --reload
     - id: id
     - id_message: int
     - id_entrepreneur: int 
+
+**Através da segmentação vai ser a flag para os fluxos**
